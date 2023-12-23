@@ -1,3 +1,7 @@
+.cuisine {
+    margin: 0;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -18,4 +22,47 @@
     padding: 10px;
     margin: 10px;
     margin-right: 60px;
+}
+
+.res-card {
+    padding: 5px;
+    width: 230px;
+    height: 380px;
+    margin: 5px;
+}
+
+.res-card:hover {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.res-logo {
+    width: 100%;
+}
+
+.search {
+    padding: 10px;
+}
+
+.star {
+    width: 10%;
+    padding-right: 4px;
+}
+
+.rating {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.res-name {
+    margin: 15 0 15;
+}
+
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.time {
+    margin-left: 10px;
 }
