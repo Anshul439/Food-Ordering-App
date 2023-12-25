@@ -29,6 +29,7 @@
     width: 230px;
     height: 380px;
     margin: 5px;
+    background-color: #f0f0f0;
 }
 
 .res-card:hover {
@@ -45,7 +46,7 @@
 }
 
 .star {
-    width: 10%;
+    width: 8%;
     padding-right: 4px;
 }
 
