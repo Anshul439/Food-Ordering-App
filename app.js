@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 
 const Header = () => {
     return (
-        <div class="header">
+        <div className="header">
             <div className="logo-container">
                 <img className="logo" src="https://png.pngtree.com/template/20191014/ourmid/pngtree-pin-food-delivery-map-location-delivery-logo-concept-image_318151.jpg"></img>
             </div>
@@ -21,18 +21,20 @@ const Header = () => {
 
 const RestaurantCard = (props) => {
     const { resData } = props;
+
+    const {cloudinaryImageId, name, cuisines, avgRating, sla, costForTwo} = resData?.info
     return (
         <div className="res-card">
-            <img className="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + resData.info.cloudinaryImageId}></img>
-            <h3 className="res-name">{resData.info.name}</h3>
-            <h4 className="cuisine">{resData.info.cuisines.join(", ")}</h4>
+            <img className="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId}></img>
+            <h3 className="res-name">{name}</h3>
+            <h4 className="cuisine">{cuisines.join(", ")}</h4>
             <div className="rating">
                 <img className="star" src="https://www.freeiconspng.com/thumbs/stars-png/download-png-image-star-png-image-1.png"></img>
-                <h4>{resData.info.avgRating}</h4> 
-                <h4 className="time">• {resData.info.sla.deliveryTime} mins</h4>
+                <h4>{avgRating}</h4> 
+                <h4 className="time">• {sla.deliveryTime} mins</h4>
             </div>
             <div>
-                <h4>{resData.info.costForTwo}</h4></div>
+                <h4>{costForTwo}</h4></div>
         </div>
     )
 }
@@ -1039,18 +1041,10 @@ const Body = () => {
         <div className="body">
             <div className="search">Search</div>
             <div className="res-container">
-                <RestaurantCard resData = {resList[0]} />
-                <RestaurantCard resData = {resList[1]} />
-                <RestaurantCard resData = {resList[2]} />
-                <RestaurantCard resData = {resList[3]} />
-                <RestaurantCard resData = {resList[4]} />
-                <RestaurantCard resData = {resList[5]} />
-                <RestaurantCard resData = {resList[6]} />
-                <RestaurantCard resData = {resList[7]} />
-                <RestaurantCard resData = {resList[8]} />
-                <RestaurantCard resData = {resList[9]} />
-                <RestaurantCard resData = {resList[10]} />
-                <RestaurantCard resData = {resList[11]} /> 
+              {
+              resList.map((restaurant) => (
+                <RestaurantCard key = {restaurant.info.id} resData = {restaurant} /> 
+              ))}
             </div>
         </div>
     )
@@ -1058,7 +1052,7 @@ const Body = () => {
 
 const AppLayout = () => {
     return (
-        <div class="app">
+        <div className="app">
             <Header />
             <Body /> 
         </div>
