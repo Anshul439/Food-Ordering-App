@@ -13,6 +13,7 @@
   "author": "Anshul Wadhwa",
   "license": "ISC",
   "devDependencies": {
+    "buffer": "^6.0.3",
     "parcel": "^2.10.3",
     "process": "^0.11.10"
   },
