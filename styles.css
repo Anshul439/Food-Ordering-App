@@ -69,6 +69,20 @@
     flex-wrap: wrap;
 }
 
+.shimmer-card {
+    padding: 5px;
+    width: 230px;
+    height: 450px;
+    margin: 5px;
+    background-color: #f0f0f0;
+}
+
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 45px;
+}
+
 .time {
     margin-left: 10px;
 }
