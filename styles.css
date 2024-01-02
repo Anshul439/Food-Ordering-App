@@ -66,6 +66,7 @@
 
 .search {
     padding: 10px;
+    cursor: pointer;
 }
 
 .star {
