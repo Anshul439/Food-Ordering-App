@@ -2,6 +2,10 @@
     margin: 0;
 }
 
+.filter {
+    display: flex;
+}
+
 .filter-btn {
     margin: 10px;
     cursor: pointer;
@@ -11,6 +15,19 @@
     display: flex;
     justify-content: space-between;
     border: 1px solid black;
+}
+
+.login {
+    margin-right: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.login-list {
+    margin-top: 10px;
+    margin-right: 12px;
+    margin-left: 12px;
 }
 
 .logo {
@@ -23,10 +40,11 @@
     font-size: 20px;
 }
 
-.nav-items > ul > li {
+/* .nav-items > ul > li */
+.menu-items {
     padding: 10px;
     margin: 10px;
-    margin-right: 60px;
+    margin-right: 15px;
 }
 
 .res-card {
