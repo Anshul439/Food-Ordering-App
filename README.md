@@ -1,1 +1,1 @@
-# Namaste-React
+# A food ordering app made with react
