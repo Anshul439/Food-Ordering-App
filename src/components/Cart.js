@@ -12,10 +12,10 @@ const Cart = () => {
 
   return (
     <div className="text-center m-4 p-4">
-      <h1 className="text-2xl font-bold">Cart</h1>
+      <div className="flex justify-between"><h1 className="text-3xl font-bold ml-[703px]">Cart</h1><button className="p-2 m-2 bg-black text-white rounded-lg" onClick={handleClearCart}>Clear Cart</button></div>
       <div className="w-6/12 m-auto">
-        <button className="p-2 m-2 bg-black text-white rounded-lg" onClick={handleClearCart}>Clear Cart</button>
-        {clearCart.length === 0 && <h1>Cart is empty</h1>}
+        
+        {cartItems.length === 0 && (<h1 className="font-bold">Cart is empty</h1>)}
         <ItemList items={cartItems} />
       </div>
     </div>

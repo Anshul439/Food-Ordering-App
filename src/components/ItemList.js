@@ -3,6 +3,7 @@ import { CDN_URL } from "../utils/constants";
 import { addItem } from "../utils/cartSlice";
 
 const ItemList = ({ items }) => {
+  console.log(items);
 
   const dispatch = useDispatch();
 
@@ -19,7 +20,9 @@ const ItemList = ({ items }) => {
         >
           <div className="w-9/12">
             <div className="py-2">
-              <span>{item.card.info.name}</span>
+              {item.card.info.isBestseller === true ? <img src="https://www.freeiconspng.com/uploads/best-seller-icon-png-2.png" className="w-12"></img> : ""}
+              <span>{item.card.info.isVeg === 1 ? <img src="https://i.pinimg.com/originals/e4/1f/f3/e41ff3b10a26b097602560180fb91a62.png" className="w-4"></img> : <img src="https://www.pngkey.com/png/full/245-2459071_non-veg-icon-non-veg-symbol-png.png" className="w-4"></img>}</span>
+              <span>{item.card.info.name} </span>
               <span>
                 - ₹
                 {item.card.info.price

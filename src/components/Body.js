@@ -43,7 +43,7 @@ const Body = () => {
   const onlineStatus = useOnlineStatus();
 
   if (onlineStatus === false) {
-    return <h1>Offline</h1>;
+    return <Shimmer />
   }
 
   return listOfRestaurants.length === 0 ? (
@@ -61,7 +61,7 @@ const Body = () => {
             }}
           ></input>
           <button
-            className="px-4 py-2 m-4 bg-green-100 rounded-3xl"
+            className="px-4 py-2 m-4 bg-green-100 rounded-3xl hover:bg-green-200"
             onClick={() => {
               const filteredRestaurant = listOfRestaurants.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -74,12 +74,12 @@ const Body = () => {
           </button>
         </div>
 
-        <div className="search m-4 p-4 flex items-center">
+        <div className="search my-4 py-4 flex items-center">
           <button
-            className="px-4 py-2 bg-gray-100 rounded-3xl"
+            className="px-4 py-2 bg-gray-100 rounded-3xl hover:bg-slate-200"
             onClick={() => {
               const filteredList = filteredRestaurant.filter(
-                (res) => res.info.avgRating > 4.3
+                (res) => res.info.avgRating > 4.4
               );
               setFilteredRestaurant(filteredList);
             }}
